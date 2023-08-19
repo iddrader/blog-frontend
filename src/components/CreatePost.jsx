@@ -9,8 +9,7 @@ const CreatePost = () => {
     const handleCreatePost = (event) => {
         event.preventDefault();
         const form = event.target.form;
-        console.log(form.createTitle.value)
-        axios.post("http://localhost:3000/posts", {
+        axios.post("https://blog-nu-bice.vercel.app/posts", {
                 title: form.createTitle.value,
                 text: form.createText.value,
             },

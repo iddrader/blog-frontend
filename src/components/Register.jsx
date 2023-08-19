@@ -8,7 +8,7 @@ const Register = () => {
     const handleLogin = (event) => {
         event.preventDefault();
         const form = event.target.form;
-        axios.post('http://localhost:3000/auth/register', {
+        axios.post('https://blog-nu-bice.vercel.app/auth/register', {
             email: form.email.value,
             fullName: form.fullName.value,
             password: form.password.value,
@@ -27,7 +27,7 @@ const Register = () => {
                 <form>
                     <label htmlFor="email">
                         <div className="email">Email</div>
-                        <input type="email" name="email" id="email" />
+                        <input type="email" name="email" id="email"/>
                     </label>
                     <label htmlFor="fullName">
                         <div className="fullName">Full Name</div>

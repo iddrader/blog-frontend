@@ -7,7 +7,7 @@ const PostsList = () => {
     const [posts, setPosts] = useState(null);
 
     useEffect(() => {
-        axios.get('http://localhost:3000/posts')
+        axios.get('https://blog-nu-bice.vercel.app/posts')
             .then(response => response.data)
             .then(data => setPosts(data.reverse()))
     }, [])

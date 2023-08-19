@@ -8,7 +8,7 @@ const Login = () => {
     const handleLogin = (event) => {
         event.preventDefault();
         const form = event.target.form;
-        axios.post('http://localhost:3000/auth/login', {
+        axios.post('https://blog-nu-bice.vercel.app/auth/login', {
             email: form.email.value,
             password: form.password.value,
         }).then(response => response.data)

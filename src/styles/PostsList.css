@@ -1,8 +1,8 @@
 .posts-list {
-    margin: 2em 36em;
+    min-width: 60%;
+    max-width: 100%;
     background-color: rgb(219, 219, 219);
     padding: 4em;
-    border-radius: 1em;
     animation: show 0.6s;
 }
 
@@ -16,6 +16,8 @@
 }
 
 .post {
+    min-width: 60%;
+    max-width: 100%;
     background-color: rgb(244, 244, 244);
     padding: 1.6em;
     border-radius: 0.4em;
