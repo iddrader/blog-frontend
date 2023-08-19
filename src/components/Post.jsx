@@ -1,9 +1,10 @@
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useOutletContext } from "react-router-dom";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import '../styles/Post.css';
 
 const Post = () => {
+    const [isAuth, setIsAuth, token, setToken] = useOutletContext();
     const { id } = useParams();
     const [post, setPost] = useState(null);
 
@@ -13,12 +14,23 @@ const Post = () => {
             .then(data => setPost(data))
     }, [id])
 
+    const deletePost = () => {
+        axios.delete(`http://localhost:3000/posts/${id}`, {
+            headers: {
+                "Authorization": `Bearer ${token}`
+            }
+        })
+    }
+
     if (post !== null){
         return (
             <div className="post-single">
                     <div className="post-header">
                         <h3 className="post-title">{post.title}</h3>
-                        <div className="views">{post.viewsCount} views</div>
+                        <div>
+                            <div className="views">{post.viewsCount} views</div>
+                            <a href="#" onClick={deletePost}>Delete post</a>
+                        </div>
                     </div>
                     <p className="post-author">by {post.user.fullName}</p>
                     <p className="post-text">{post.text}</p>
