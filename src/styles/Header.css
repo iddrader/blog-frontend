@@ -6,6 +6,10 @@ header {
     align-items: center;   
 }
 
+header h1 {
+    color: black;
+}
+
 header ul {
     display: flex;
     gap: 2em;

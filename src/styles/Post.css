@@ -1,15 +1,8 @@
-.posts-list {
-    margin: 2em 36em;
-    background-color: rgb(219, 219, 219);
-    padding: 4em;
-    border-radius: 1em;
-}
-
-.post {
+.post-single {
     background-color: rgb(244, 244, 244);
     padding: 1.6em;
     border-radius: 0.4em;
-    margin: 1em 0;
+    margin: 1em 36em;
 }
 
 .post-title {
@@ -25,10 +18,4 @@
     margin-top: 1em;
     max-height: 20em;
     overflow: hidden;
-}
-
-.post-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }

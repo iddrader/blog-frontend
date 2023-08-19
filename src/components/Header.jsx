@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import '../styles/Header.css';
 
 const Header = (props) => {
@@ -5,7 +6,7 @@ const Header = (props) => {
 
     return (
         <header>
-            <h1>Blog</h1>
+            <Link to='/posts'><h1>Blog</h1></Link>
             <div className="header-buttons">
             { isAuth ? (
                 <ul>
@@ -14,7 +15,7 @@ const Header = (props) => {
                 </ul>
             ) : (
                 <ul>
-                    <li><a href="#">Login</a></li>
+                    <li><Link to="/login">Login</Link></li>
                     <li><a href="#">Register</a></li>
                 </ul>
             )}

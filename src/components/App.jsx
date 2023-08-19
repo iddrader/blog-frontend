@@ -5,11 +5,12 @@ import '../styles/App.css';
 
 function App() {
   const [isAuth, setIsAuth] = useState(false);
-  
+  const [token, setToken] = useState(null);
+
   return (
     <>
       <Header isAuth={isAuth} />
-      <Outlet />
+      <Outlet context={[isAuth, setIsAuth, token, setToken]}/>
     </>
   )
 }
