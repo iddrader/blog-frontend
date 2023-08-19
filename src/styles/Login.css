@@ -38,7 +38,8 @@ label {
 }
 
 .email,
-.password {
+.password,
+.fullName {
     color: rgb(55, 55, 55);
 }
 

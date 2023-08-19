@@ -3,6 +3,13 @@ import '../styles/Header.css';
 
 const Header = (props) => {
     const isAuth = props.isAuth;
+    const setIsAuth = props.setIsAuth;
+    const setToken = props.setToken;
+
+    const logOut = () => {
+        setIsAuth(false);
+        setToken(null);
+    }
 
     return (
         <header>
@@ -10,13 +17,13 @@ const Header = (props) => {
             <div className="header-buttons">
             { isAuth ? (
                 <ul>
-                    <li><a href="#">Create post</a></li>
-                    <li><a href="#">Log out</a></li>
+                    <li><Link to="/create">Create post</Link></li>
+                    <li><a href="#" onClick={logOut}>Log out</a></li>
                 </ul>
             ) : (
                 <ul>
                     <li><Link to="/login">Login</Link></li>
-                    <li><a href="#">Register</a></li>
+                    <li><Link to="/register">Register</Link></li>
                 </ul>
             )}
             </div>

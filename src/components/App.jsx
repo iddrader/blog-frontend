@@ -9,7 +9,7 @@ function App() {
 
   return (
     <>
-      <Header isAuth={isAuth} />
+      <Header isAuth={isAuth} setIsAuth={setIsAuth} setToken={setToken}/>
       <Outlet context={[isAuth, setIsAuth, token, setToken]}/>
     </>
   )

@@ -9,10 +9,8 @@ const PostsList = () => {
     useEffect(() => {
         axios.get('http://localhost:3000/posts')
             .then(response => response.data)
-            .then(data => setPosts(data))
+            .then(data => setPosts(data.reverse()))
     }, [])
-
-    console.log(posts)
 
     return (
         <div className="posts-list">

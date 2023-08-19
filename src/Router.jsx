@@ -3,6 +3,8 @@ import App from "./components/App.jsx";
 import PostsList from "./components/PostsList.jsx";
 import Post from './components/Post.jsx';
 import Login from './components/Login.jsx';
+import Register from "./components/Register.jsx";
+import CreatePost from "./components/CreatePost.jsx";
 
 const Router = () => {
     const router = createBrowserRouter([
@@ -12,7 +14,9 @@ const Router = () => {
             children: [
                 {path: '/posts', element: <PostsList />},
                 {path: '/post/:id', element: <Post />},
-                {path: '/login', element: <Login />}
+                {path: '/login', element: <Login />},
+                {path: '/register', element: <Register />},
+                {path: '/create', element: <CreatePost />}
             ]
         }
     ])
