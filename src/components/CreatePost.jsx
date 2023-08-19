@@ -11,15 +11,15 @@ const CreatePost = () => {
         const form = event.target.form;
         console.log(form.createTitle.value)
         axios.post("http://localhost:3000/posts", {
-            title: form.createTitle.value,
-            text: form.createText.value,
-        },
-        {
-            headers: {
-                "Authorization": `Bearer ${token}`
-            }
-        }).then(navigate('/posts'))
-          .catch(err => console.log(err))
+                title: form.createTitle.value,
+                text: form.createText.value,
+            },
+            {
+                headers: {
+                    "Authorization": `Bearer ${token}`
+                }
+            }).then(navigate('/posts'))
+            .catch(err => console.log(err))
 
 
     }
