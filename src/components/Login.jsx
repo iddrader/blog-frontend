@@ -24,11 +24,11 @@ const Login = () => {
                 <h3>Login</h3>
                 <form>
                     <label htmlFor="email">
-                        Email
+                        <div className="email">Email</div>
                         <input type="email" name="email" id="email" />
                     </label>
                     <label htmlFor="password">
-                        Password
+                        <div className="password">Password</div>
                         <input type="password" name="password" id="password" />
                     </label>
                     <button type="submit" onClick={handleLogin}>Login</button>
@@ -39,7 +39,8 @@ const Login = () => {
 
     return (
         <h4 style={{width: "fit-content", margin: "auto" }}>
-            You are already logged in!
+            Logged in successfully!
+            <br />
             <Link to='/posts'>View Posts</Link>
         </h4>
     )
