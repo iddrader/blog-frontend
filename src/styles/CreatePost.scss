@@ -1,0 +1,41 @@
+.create-post-page {
+    margin: 20px 0;
+    padding: 14px;
+    border-radius: 20px;
+    border: 1px solid #f8f8f8;
+    
+    .create-post-container {
+        display: flex;
+        flex-direction: column;
+        
+        form {
+            display: flex;
+            flex-direction: column;
+
+            label {
+                input,
+                textarea {
+                    width: 100%;
+                    border-radius: 6px;
+                    border: 1px solid #b2b2b2;
+                }
+            }
+
+            button {
+                background-color: white;
+                border: 1px solid #b2b2b2;
+                border-radius: 6px;
+                width: 100%;
+                padding: 4px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@media (min-width: 1000px) {
+    .create-post-page {
+        width: 40%;
+        margin: auto;
+    }
+}

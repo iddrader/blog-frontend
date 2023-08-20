@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import '../styles/Header.css';
+import '../styles/Header.scss';
 
 const Header = (props) => {
     const isAuth = props.isAuth;
@@ -13,7 +13,7 @@ const Header = (props) => {
 
     return (
         <header>
-            <Link to='/posts'><h1>Blog</h1></Link>
+            <Link to='/posts' className="logoText"><h1>Blog</h1></Link>
             <div className="header-buttons">
             { isAuth ? (
                 <ul>

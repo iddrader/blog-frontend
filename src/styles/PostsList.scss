@@ -1,0 +1,60 @@
+.posts-list {
+    margin: 10px;
+    animation: showPosts 0.6s;
+    display: flex;
+    flex-direction: column;
+
+    .post {
+        margin: 20px 0;
+        padding: 14px;
+        border-radius: 20px;
+        border: 1px solid #f8f8f8;
+
+        .post-header {
+            display: flex;
+            justify-content: space-between;
+            margin: 6px 0;
+
+            .views {
+                opacity: 0.7;
+            }
+        }
+
+        .post-author {
+            opacity: 0.7;
+            margin-bottom: 6px;
+        }
+
+        .post-text {
+            word-wrap: break-word;
+            margin-bottom: 12px;
+        }
+
+        a {
+            color: black;
+        }
+    }
+
+    .post:hover {
+        box-shadow: 2px 2px 10px #e5e5e5;
+    }
+}
+
+@media (min-width: 1000px) {
+    .posts-list {
+        align-items: center;
+    }
+    .post {
+        width: 60%;
+    }
+    
+}
+
+@keyframes showPosts {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

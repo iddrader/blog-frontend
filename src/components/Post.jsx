@@ -1,7 +1,7 @@
 import { useParams, Link, useOutletContext, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useState, useEffect } from "react";
-import '../styles/Post.css';
+import '../styles/Post.scss';
 
 const Post = () => {
     const [isAuth, setIsAuth, token, setToken] = useOutletContext();
@@ -54,14 +54,17 @@ const Post = () => {
                         <h3 className="post-title">{post.title}</h3>
                         <div>
                             <div className="views">{post.viewsCount} views</div>
-                            <a href="#" onClick={handleEditingChange}>Edit</a>
-                            <br />
-                            <a href="#" onClick={deletePost}>Delete post</a>
                         </div>
                     </div>
                     <p className="post-author">by {post.user.fullName}</p>
                     <p className="post-text-single">{post.text}</p>
-                    <Link to='/posts'>- Go back</Link>
+                    <div className="buttons">
+                        <Link to='/posts'>- Go back</Link>
+                        <div className="edit-buttons">
+                            <a href="#" onClick={handleEditingChange}>Edit</a>
+                            <a href="#" onClick={deletePost}>Delete post</a>
+                        </div>
+                    </div>
             </div>
     )} else if (post !== null && isEditing === true) {
         return (
@@ -71,7 +74,7 @@ const Post = () => {
                     <label htmlFor="title" className="post-title">Title</label>
                     <input type="text" name="title" id="create-title" defaultValue={post.title} />
                     <label htmlFor="text">Text</label>
-                    <textarea type="text" name="text" id="create-text" defaultValue={post.text} />
+                    <textarea type="text" name="text" id="create-text" defaultValue={post.text} rows={10}/>
                     <button onClick={handleEditing}>Submit</button>
                 </form>
                 <Link to='/posts'>- Go back</Link>

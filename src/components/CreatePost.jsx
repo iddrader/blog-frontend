@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { redirect, useOutletContext, useNavigate } from 'react-router-dom';
-import '../styles/CreatePost.css';
+import '../styles/CreatePost.scss';
 
 const CreatePost = () => {
     const [isAuth, setIsAuth, token, setToken] = useOutletContext();

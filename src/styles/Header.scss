@@ -1,0 +1,21 @@
+header {
+    background-color: rgb(62, 62, 62);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+
+    a {
+        color: white;
+        text-decoration: none;
+        margin-right: 20px;
+    }
+    
+    .header-buttons {
+
+        ul {
+            list-style-type: none;
+            display: flex;
+        }
+    }
+}
