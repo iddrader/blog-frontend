@@ -12,6 +12,7 @@ const Router = () => {
             path: '/',
             element: <App />,
             children: [
+                {index: true, element: <PostsList />},
                 {path: '/posts', element: <PostsList />},
                 {path: '/post/:id', element: <Post />},
                 {path: '/login', element: <Login />},
