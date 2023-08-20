@@ -1,6 +1,6 @@
 import { useOutletContext, Link } from "react-router-dom";
 import axios from "axios";
-import '../styles/Login.css';
+import '../styles/Login.scss';
 
 const Register = () => {
     const [isAuth, setIsAuth, token, setToken] = useOutletContext();
