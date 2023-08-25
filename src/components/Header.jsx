@@ -9,6 +9,8 @@ const Header = (props) => {
     const logOut = () => {
         setIsAuth(false);
         setToken(null);
+        localStorage.removeItem("token");
+        localStorage.removeItem("userId");
     }
 
     return (

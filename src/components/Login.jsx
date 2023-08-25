@@ -16,6 +16,9 @@ const Login = () => {
             setToken(data.token);
             setIsAuth(true);
             setUserId(data._id);
+
+            localStorage.token = data.token;
+            localStorage.userId = data._id;
           })
     }
 

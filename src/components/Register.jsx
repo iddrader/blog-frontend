@@ -17,6 +17,9 @@ const Register = () => {
             setToken(data.token);
             setIsAuth(true);
             setUserId(data._id);
+
+            localStorage.token = data.token;
+            localStorage.userId = data._id;
           })
           .catch((err) => alert(err.response.data.message))
     }

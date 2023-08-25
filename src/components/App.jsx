@@ -9,7 +9,11 @@ function App() {
   const [userId, setUserId] = useState(null);
 
   useEffect(() => {
-    // todo localstorage auth
+    if(localStorage.token) {
+      setToken(localStorage.token);
+      setUserId(localStorage.userId);
+      setIsAuth(true);
+    }
   }, [])
 
   return (
