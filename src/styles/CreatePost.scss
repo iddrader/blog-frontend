@@ -7,6 +7,7 @@
     .create-post-container {
         display: flex;
         flex-direction: column;
+        animation: createPost 0.2s ease-in-out;
         
         form {
             display: flex;
@@ -39,5 +40,14 @@
     .create-post-page {
         width: 40%;
         margin: auto;
+    }
+}
+
+@keyframes createPost {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
     }
 }

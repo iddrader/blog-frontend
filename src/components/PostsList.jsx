@@ -13,22 +13,24 @@ const PostsList = () => {
     }, [])
 
     return (
-        <div className="posts-list">
-            {posts && posts.map(post => (
-                <div key={post._id} className="post">
-                    <div className="post-header">
-                        <h3 className="post-title">{post.title}</h3>
-                        <div className="views">{post.viewsCount} views</div>
+        <>
+            {posts && <div className="posts-list">
+                { posts.map(post => (
+                    <div key={post._id} className="post">
+                        <div className="post-header">
+                            <h3 className="post-title">{post.title}</h3>
+                            <div className="views">{post.viewsCount} views</div>
+                        </div>
+                        <p className="post-author">by {post.user.fullName}</p>
+                        <div className="content">
+                            { post.imageURL && <img src={post.imageURL} alt="" height="120px"/> }
+                            <p className="post-text">{post.text}</p>
+                        </div>
+                        <Link to={`/post/${post._id}`}>View full post</Link>
                     </div>
-                    <p className="post-author">by {post.user.fullName}</p>
-                    <div className="content">
-                        { post.imageURL && <img src={post.imageURL} alt="" height="120px"/> }
-                        <p className="post-text">{post.text}</p>
-                    </div>
-                    <Link to={`/post/${post._id}`}>View full post</Link>
-                </div>
-            ))}
-        </div>
+                ))}
+            </div>}
+        </>
     )
 }
 

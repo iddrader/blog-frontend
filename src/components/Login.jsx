@@ -3,7 +3,7 @@ import axios from "axios";
 import '../styles/Login.scss';
 
 const Login = () => {
-    const [isAuth, setIsAuth, token, setToken] = useOutletContext();
+    const [isAuth, setIsAuth, token, setToken, userId, setUserId] = useOutletContext();
 
     const handleLogin = (event) => {
         event.preventDefault();
@@ -15,6 +15,7 @@ const Login = () => {
           .then(data => {
             setToken(data.token);
             setIsAuth(true);
+            setUserId(data._id);
           })
     }
 

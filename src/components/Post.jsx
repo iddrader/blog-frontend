@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import '../styles/Post.scss';
 
 const Post = () => {
-    const [isAuth, setIsAuth, token, setToken] = useOutletContext();
+    const [isAuth, setIsAuth, token, setToken, userId, setUserId] = useOutletContext();
     const { id } = useParams();
     const [post, setPost] = useState(null);
     const [isEditing, setIsEditing] = useState(false);
@@ -61,10 +61,10 @@ const Post = () => {
                     <p className="post-text-single">{post.text}</p>
                     <div className="buttons">
                         <Link to='/posts'>- Go back</Link>
-                        <div className="edit-buttons">
+                        { userId == post.user._id && <div className="edit-buttons">
                             <a href="#" onClick={handleEditingChange}>Edit</a>
                             <a href="#" onClick={deletePost}>Delete post</a>
-                        </div>
+                        </div> }
                     </div>
             </div>
     )} else if (post !== null && isEditing === true) {

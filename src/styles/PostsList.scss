@@ -1,6 +1,6 @@
 .posts-list {
     margin: 10px;
-    animation: showPosts 0.6s;
+    animation: showPosts 0.6s ease-in-out;
     display: flex;
     flex-direction: column;
 
