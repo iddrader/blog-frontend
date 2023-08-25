@@ -3,12 +3,12 @@ import axios from "axios";
 import '../styles/Login.scss';
 
 const Login = () => {
-    const [isAuth, setIsAuth, token, setToken, userId, setUserId] = useOutletContext();
+    const [isAuth, setIsAuth, token, setToken, userId, setUserId, serverURL] = useOutletContext();
 
     const handleLogin = (event) => {
         event.preventDefault();
         const form = event.target.form;
-        axios.post('https://blog-nu-bice.vercel.app/auth/login', {
+        axios.post(`${serverURL.current}/auth/login`, {
             email: form.email.value,
             password: form.password.value,
         }).then(response => response.data)

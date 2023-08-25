@@ -3,12 +3,12 @@ import axios from "axios";
 import '../styles/Login.scss';
 
 const Register = () => {
-    const [isAuth, setIsAuth, token, setToken, userId, setUserId] = useOutletContext();
+    const [isAuth, setIsAuth, token, setToken, userId, setUserId, serverURL] = useOutletContext();
 
     const handleLogin = (event) => {
         event.preventDefault();
         const form = event.target.form;
-        axios.post('https://blog-nu-bice.vercel.app/auth/register', {
+        axios.post(`${serverURL.current}/auth/register`, {
             email: form.email.value,
             fullName: form.fullName.value,
             password: form.password.value,
@@ -48,7 +48,7 @@ const Register = () => {
     )
 
     return (
-        <h4 style={{width: "fit-content", margin: "auto" }}>
+        <h4 style={{width: "fit-content", margin: "auto 2em" }}>
             Registered in successfully!
             <br />
             <Link to='/posts'>View Posts</Link>

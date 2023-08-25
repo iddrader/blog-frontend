@@ -3,13 +3,13 @@ import { redirect, useOutletContext, useNavigate } from 'react-router-dom';
 import '../styles/CreatePost.scss';
 
 const CreatePost = () => {
-    const [isAuth, setIsAuth, token, setToken] = useOutletContext();
+    const [isAuth, setIsAuth, token, setToken, userId, setUserId, serverURL] = useOutletContext();
     const navigate = useNavigate();
 
     const handleCreatePost = (event) => {
         event.preventDefault();
         const form = event.target.form;
-        axios.post("https://blog-nu-bice.vercel.app/posts", {
+        axios.post(`${serverURL.current}/posts`, {
                 title: form.createTitle.value,
                 text: form.createText.value,
                 imageURL: form.createImageURL.value,

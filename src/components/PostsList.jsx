@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useOutletContext } from "react-router-dom";
 import axios from "axios";
 import '../styles/PostsList.scss';
 
 const PostsList = () => {
+    const [isAuth, setIsAuth, token, setToken, userId, setUserId, serverURL] = useOutletContext();
     const [posts, setPosts] = useState(null);
 
     useEffect(() => {
-        axios.get('https://blog-nu-bice.vercel.app/posts')
+        axios.get(`${serverURL.current}/posts`)
             .then(response => response.data)
             .then(data => setPosts(data.reverse()))
     }, [])

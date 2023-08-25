@@ -28,6 +28,7 @@
         .content {
             display: flex;
             align-items: flex-start;
+            width: 100%;
 
             img {
                 margin: 1em;
@@ -36,7 +37,6 @@
 
             .post-text {
                 word-wrap: break-word;
-                width: 100%;
                 margin-bottom: 12px;
             }
         }
