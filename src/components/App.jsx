@@ -7,7 +7,7 @@ function App() {
   const [isAuth, setIsAuth] = useState(false);
   const [token, setToken] = useState(null);
   const [userId, setUserId] = useState(null);
-  const serverURL = useRef("http://localhost:3000")
+  const serverURL = useRef("https://blog-nu-bice.vercel.app/")
 
   useEffect(() => {
     if(localStorage.token) {
