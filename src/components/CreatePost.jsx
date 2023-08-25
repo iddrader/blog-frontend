@@ -12,6 +12,7 @@ const CreatePost = () => {
         axios.post("https://blog-nu-bice.vercel.app/posts", {
                 title: form.createTitle.value,
                 text: form.createText.value,
+                imageURL: form.createImageURL.value,
             },
             {
                 headers: {
@@ -37,6 +38,10 @@ const CreatePost = () => {
                     <label htmlFor="createText">
                         <div className="create-text">Text</div>
                         <textarea name="createText" id="create-text" rows="10"/>
+                    </label>
+                    <label htmlFor="createImageURL">
+                        Image URL (optional)
+                        <input type="text" name='createImageURL' id='createImageURL' />
                     </label>
                     <button type="submit" onClick={handleCreatePost}>Create</button>
                 </form>

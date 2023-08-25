@@ -57,6 +57,7 @@ const Post = () => {
                         </div>
                     </div>
                     <p className="post-author">by {post.user.fullName}</p>
+                    <img src={post.imageURL} alt="" width="100%"/>
                     <p className="post-text-single">{post.text}</p>
                     <div className="buttons">
                         <Link to='/posts'>- Go back</Link>
