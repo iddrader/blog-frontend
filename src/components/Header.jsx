@@ -19,6 +19,7 @@ const Header = (props) => {
             <div className="header-buttons">
             { isAuth ? (
                 <ul>
+                    <li><Link to="/profile">Profile</Link></li>
                     <li><Link to="/create">Create post</Link></li>
                     <li><a href="#" onClick={logOut}>Log out</a></li>
                 </ul>

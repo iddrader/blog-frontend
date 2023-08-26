@@ -86,13 +86,13 @@ const Post = () => {
                         </div>
                 </div>
                 <div className="comments">
-                    <div className="createComment">
+                    {isAuth && <div className="createComment">
                         <form>
                             <label htmlFor="text">Comment</label>
                             <textarea type="text" name="text" />
                             <button onClick={createComment}>Submit</button>
                         </form>
-                    </div>
+                    </div> }
                     { post.comments && post.comments.map(comment => (
                         <div key={comment} className="comment">
                             <div className="commentUser">{comment.userId}</div>

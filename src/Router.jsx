@@ -5,6 +5,7 @@ import Post from './components/Post.jsx';
 import Login from './components/Login.jsx';
 import Register from "./components/Register.jsx";
 import CreatePost from "./components/CreatePost.jsx";
+import Profile from "./components/Profile.jsx";
 
 const Router = () => {
     const router = createBrowserRouter([
@@ -17,7 +18,8 @@ const Router = () => {
                 {path: '/post/:id', element: <Post />},
                 {path: '/login', element: <Login />},
                 {path: '/register', element: <Register />},
-                {path: '/create', element: <CreatePost />}
+                {path: '/create', element: <CreatePost />},
+                {path: '/profile', element: <Profile />}
             ]
         }
     ])

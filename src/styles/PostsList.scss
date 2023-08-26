@@ -57,6 +57,26 @@
     }
 }
 
+.loading {
+    margin: 10em auto;
+    border: 10px solid #EAF0F6;
+    border-radius: 50%;
+    border-top: 10px solid #000;
+    width: 100px;
+    height: 100px;
+    animation: spinner 2s linear infinite;
+}
+
+
+@keyframes spinner {
+    from { 
+        transform: rotate(0deg); 
+    }
+    to { 
+        transform: rotate(360deg); 
+    }
+}
+
 @media (min-width: 1000px) {
     .posts-list {
         align-items: center;
